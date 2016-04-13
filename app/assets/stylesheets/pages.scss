@@ -183,10 +183,11 @@
   margin: 0px
 }
 
-.signup-form {
-  margin: 0px 50px
+@media (min-width: 768px) {
+  .signup-form {
+    margin: 0px 50px
+  }
 }
-
 
 /* Buttons */
 
