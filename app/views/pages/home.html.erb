@@ -1,0 +1,235 @@
+<% content_for :nav, render('layouts/transparent_header') %>
+
+<div class="landing">
+  <div id="video" class="videoContainer hidden-xs">
+    <video id="mainVideo" autoplay="true" loop="true" muted="true" poster="http://i.imgur.com/hInwwb7.jpg">
+      <source src="https://cdn.streamable.com/video/mp4/081p.mp4" type="video/mp4">
+    </video>
+  </div>                                                                                          
+  <div id="image" class="hidden-sm hidden-md hidden-lg videoContainer" style="min-width: 100%;">
+    <img src="http://i.imgur.com/SuF4zQg.jpg?1" />  
+  </div>
+  <div class="landing-content page-container page-container-full text-center">
+    <div class="landing-container landing-container-v landing-container-h">
+      <div class="landing-middle">
+
+        <h2 class="text-branding text-jumbo text-contrast space-1 hero__heading">
+          It's Time to Fly
+        </h2>
+        <div class="h4 text-contrast space-4">
+         Rent a drone from someone nearby.
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4 hidden-xs">
+          <div class="input-group">
+            <input type="search" name="address" id="address" class="form-control landing-address" autofocus="autofocus" placeholder="Where do you want to rent?" required="required" autocomplete="off">
+            <span class="input-group-btn">
+              <button name="button" type="submit" value="search" class="btn btn-primary landing-address landing-button fa fa-search"></button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <div class="input-group hidden-sm hidden-md hidden-lg">
+        <input type="search" name="address" id="address" class="form-control mobile-landing-address gmaps-autocomplete" autofocus="autofocus" placeholder="Enter Your Delivery address" required="required" autocomplete="off">
+        <span class="input-group-btn">
+          <button name="button" type="submit" value="search" class="btn btn-primary mobile-landing-address landing-button fa fa-chevron-right"></button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+</div>
+
+<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 hidden-xs space-top-8">
+  <div class="col-sm-6 col-md-8 no-padding">
+    <div id="landingCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3200" data-pause="false">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide carousel-image" src="http://i.imgur.com/TNuYOsQ.jpg" alt="First slide">
+        </div>
+        <div class="item">
+          <img class="second-slide carousel-image" src="http://i.imgur.com/Ru9LPcg.jpg" alt="Second slide">
+        </div>
+        <div class="item">
+          <img class="third-slide carousel-image" src="http://i.imgur.com/Ru9LPcg.jpg" alt="Third slide">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6 col-md-4 no-padding" style="background:#fff; height: 309.984px">
+    <div class="va-container va-container-v va-container-h">
+      <div class="va-middle rent-banner">
+        <div class="rent-banner-title grey space-4 text-center">
+          <strong>
+            Rent out your drone today!
+          </strong>
+        </div>
+        <div class="host-banner__subtitle grey space-4 text-center">
+          You can earn extra money by sharing your drone with people in your area.
+        </div>
+        <div class="text-center">
+          <a href="/" class="btn btn-primary btn-lowercase">See what you can make</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="clearfix"></div>
+
+
+<h2 class="text-center grey space-top-8 space-8">
+  Drone Rentals in Atlanta, GA
+</h2>
+
+<div class="col-md-10 col-md-offset-1 drone-img">
+  <a href="/" class="no-underline">
+    <div class="col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 drone-img">
+      <div class="drone-card" style="background-image: url('http://i.imgur.com/uvQdsmE.jpg?1')">
+        <div class="va-container va-container-v va-container-h">
+          <div class="va-middle text-center text-contrast">
+            <div class="h2 medium-text no-margin text-shadow bring-front">
+                DJI Inspire
+            </div>
+          </div>
+        </div>
+        <div class="panel-overlay-bottom-left panel-overlay-label panel-overlay-listing-label">
+          <sup class="h6 text-contrast thin-text">
+            $
+          </sup>
+          <span class="h3 price-amount thin-text">
+            80
+          </span>
+        </div>
+      </div>
+    </div>
+  </a>
+  <div class="clearfix hidden-md hidden-lg"></div>
+  <br class="visible-sm" />
+  <br class="visible-sm" />
+  <a href="/" class="no-underline">
+    <div class="col-sm-6 col-md-4 drone-img">
+      <div class="drone-card" style="background-image: url('http://i.imgur.com/EzDl3OO.jpg?1')">
+        <div class="va-container va-container-v va-container-h">
+          <div class="va-middle text-center text-contrast">
+            <div class="h2 medium-text no-margin text-shadow">
+                DJI Phantom
+            </div>
+          </div>
+        </div>
+        <div class="panel-overlay-bottom-left panel-overlay-label panel-overlay-listing-label">
+          <sup class="h6 text-contrast thin-text">
+            $
+          </sup>
+          <span class="h3 price-amount thin-text">
+            60
+          </span>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="/" class="no-underline">
+    <div class="col-sm-6 col-md-4 drone-img">
+      <div class="drone-card" style="background-image: url('http://i.imgur.com/iaTt1Xw.jpg?1')">
+        <div class="va-container va-container-v va-container-h">
+          <div class="va-middle text-center text-contrast">
+            <div class="h2 medium-text no-margin text-shadow">
+                3DR Solo
+            </div>
+          </div>
+        </div>
+        <div class="panel-overlay-bottom-left panel-overlay-label panel-overlay-listing-label">
+          <sup class="h6 text-contrast thin-text">
+            $
+          </sup>
+          <span class="h3 price-amount thin-text">
+            60
+          </span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+  <div class="clearfix"></div>
+
+  <div class="col-sm-12 col-lg-4 col-lg-offset-4 hidden-xs space-top-8">
+    <a href="" class="btn btn-default btn-lowercase btn-large btn-block">
+      See All Drones
+    </a>      
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="clearfix"></div>
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+<br /><br />
+
+<div id="landingCarousel" class="carousel slide" data-ride="carousel" data-interval="3200" data-pause="false">
+  <ol class="carousel-indicators">
+    <li data-target="#landingCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#landingCarousel" data-slide-to="1" class=""></li>
+    <li data-target="#landingCarousel" data-slide-to="2" class=""></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img class="first-slide" src="http://i.imgur.com/xQiRF6e.jpg" alt="First slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Example headline.</h1>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img class="second-slide" src="http://i.imgur.com/xQiRF6e.jpg" alt="Second slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Another example headline.</h1>
+          <p><a class="btn btn-lg btn-white" href="#" role="button">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img class="third-slide" src="http://i.imgur.com/xQiRF6e.jpg" alt="Third slide">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>One more for good measure.</h1>
+          <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

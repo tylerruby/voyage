@@ -1,0 +1,36 @@
+<% content_for :nav, render('layouts/big_header') %>
+
+<br /><br />
+<div class="col-md-4 col-md-offset-4">
+  <div class="panel panel-default signup-form">
+    <div class="panel-body">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+      <h3 class="text-center">Sign up for Voyage</h3>
+      <p class="text-center">Rent a drone from someone nearby</p>
+
+      <button class="btn btn-facebook center-block"> <span class="cta-text">Sign up with Facebook</span> </button>
+
+      <p class="text-center small-spacer"><i>or</i></p>
+
+      <div class="col-xs-12">
+        <div class="form-group">
+          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <div class="form-group">
+          <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <div class="form-group">
+          <%= f.submit "Sign up", class: "btn btn-block btn-success" %>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>

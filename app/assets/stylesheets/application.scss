@@ -1,0 +1,34 @@
+$body-bg: #F3F5F5;
+$font-size-base: 16px;
+
+/* Navbar */
+
+$navbar-height: 65px;
+$navbar-default-bg: #333;
+$navbar-margin-bottom: 0px;
+$navbar-border-radius: 0;
+$navbar-default-border: transparent;
+
+$navbar-inverse-bg: #333;
+$navbar-inverse-border: #333;
+
+/* Buttons */
+
+$btn-primary-color: #fff;
+$btn-primary-bg: #4285f4;
+$btn-primary-border: #4285f4;
+
+$btn-success-color: #fff;
+$btn-success-bg: #52b043;
+$btn-success-border: #52b043;
+
+$btn-default-color: #565a5c;
+$btn-default-border: #aaa;
+
+$btn-border-radius-base: 2px;
+
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "pages";

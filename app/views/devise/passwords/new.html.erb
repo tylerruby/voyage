@@ -1,0 +1,27 @@
+<% content_for :nav, render('layouts/big_header') %>
+
+<br /><br />
+<div class="col-md-4 col-md-offset-4">
+  <div class="panel panel-default signup-form">
+    <div class="panel-body">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+    <%= devise_error_messages! %>
+      <h3 class="text-center">Forgot Password</h3>
+      <br />
+
+      <div class="col-xs-12">
+        <div class="form-group">
+          <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address" %>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <div class="form-group">
+          <%= f.submit "Send Reset Link", class: "btn btn-block btn-success" %>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,37 @@
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Log in to Voyage</h4>
+        <br />
+
+        <button class="btn btn-facebook center-block"> <span class="cta-text">Log in with Facebook</span> </button>
+
+        <p class="text-center small-spacer"><i>or</i></p>
+
+        <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+        		<div class="form-group">
+							<%= f.email_field :email, :autofocus => true, class: "form-control", placeholder: "Email" %>
+						</div>
+
+        		<div class="form-group">
+							<%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+						</div>
+
+						<%= link_to "Forgot your password?", new_password_path(resource_name), class: "forgot-password pull-right" %>
+
+        		<div class="form-group no-margin">
+							<%= f.submit "Sign in", :class => 'btn btn-block btn-small btn-success' %>
+						</div>
+
+					<div class="clearfix"></div>
+				<% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
