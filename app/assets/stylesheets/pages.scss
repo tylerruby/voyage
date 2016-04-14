@@ -42,6 +42,11 @@
   color: #f0f0f0;
   background-color: transparent
 }
+.navbar-brand-mobile {
+    padding: 6px;
+    height: 40px;
+    margin-top: 4px !important;
+}
 
 
 /* App Navbar */
@@ -352,6 +357,34 @@
     padding-right: 5px
   }
 }
+.rent-banner-mobile {
+  height: 300px
+}
+.rent-banner-background {
+  background-image: url('http://i.imgur.com/TNuYOsQ.jpg');
+  height: 100%
+}
+.background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat
+}
+.rent-cover, .rent-cover-dark:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+.rent-banner-content {
+  color: #fff;
+  text-align: center
+}
+
+
 
 .carousel-image {
   min-height: 309.984px;
@@ -368,7 +401,6 @@
   }
 }
 
-
 @media (min-width: 768px) {
 .landing {
   height: 600px
@@ -379,9 +411,6 @@
   top: 50px
   }
 }
-
-
-
 .videoContainer {
   position: absolute;
   height: 100%;

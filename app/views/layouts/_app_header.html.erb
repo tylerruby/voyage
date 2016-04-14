@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-app">
+<nav class="navbar navbar-default navbar-app hidden-xs">
   <div class="container-fluid navbar-app-container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -28,5 +28,17 @@
         <li><%= link_to "Login", "#login", "data-toggle" => "modal", class: "navbar-app-link" %></li>
       </ul>
     </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<nav class="navbar navbar-inverse navbar-app hidden-sm hidden-md hidden-lg">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a href="/">
+        <img class="navbar-brand-mobile navbar-center-brand" src="http://i.imgur.com/2Tr8CKJ.png" />
+      </a>
+    </div>
   </div><!-- /.container-fluid -->
 </nav>
