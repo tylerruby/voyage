@@ -31,10 +31,197 @@
 <nav class="navbar navbar-inverse navbar-app hidden-sm hidden-md hidden-lg">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
+
     <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed pull-left" onclick="$('body').toggleClass('slideout');">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
       <a href="/">
         <img class="navbar-brand-mobile navbar-center-brand" src="http://i.imgur.com/2Tr8CKJ.png" />
       </a>
     </div>
   </div><!-- /.container-fluid -->
 </nav>
+<nav class="nav--sm">
+	<div class="nav-mask--sm" onclick="$('body').toggleClass('slideout');"></div>
+	<!-- links -->
+	<div class="nav-content--sm panel text-white">
+		<div class="nav-header items-logged-in hidden">
+			<div class="nav-profile clearfix">
+				<div class="user-item pull-left">
+					<a class="link-reset user-profile-link" href="/users/show/0">
+						<div class="media-photo media-round user-profile-image">
+
+						</div>
+						User
+					</a>
+				</div>
+			</div>
+			<hr>
+		</div>
+		<div class="nav-menu-wrapper">
+			<div class="va-container va-container-v va-container-h">
+				<div class="va-middle nav-menu panel-body">
+					<ul class="menu-group list-unstyled row-space-3">
+						<li>
+							<a href="/" class="link-reset menu-item" rel="nofollow">
+								Home
+							</a>
+						</li>
+						<li><%= link_to('List Drone', show_path, class: "btn-white-outline") %></li>
+						<li><%= link_to('Sign Up', new_user_registration_path)  %></li>
+						<li><%= link_to 'Modal Sign Up', new_user_registration_path, :'class' => 'register-modal' %></li>
+						<li><%= link_to "Login", "#login", "data-toggle" => "modal" %></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- / links -->
+</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="sign_up_modal" tabindex="-1" role="dialog" aria-labelledby="sign_up_modal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Sign Up Voyage</h4>
+			</div>
+			<div class="modal-body">
+				<iframe id="login_iframe">Loading...</iframe>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<style>
+	.nav--sm {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1049; /* default bootstrap modal is 1050 */
+		visibility: hidden;
+	}
+	body.slideout .nav--sm {
+		visibility: visible;
+	}
+
+	body.slideout .nav--sm .nav-mask--sm {
+		opacity: .6;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+	}
+
+	 .nav-mask--sm {
+		position: absolute;
+		cursor: pointer;
+		height: 100%;
+		width: 100%;
+		background-color: #000;
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		-webkit-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		-moz-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		-o-transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	body.slideout .nav--sm .nav-content--sm {
+		left: 0;
+	}
+
+	.panel {
+		border: 1px solid #dce0e0;
+		background-color: #fff;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+
+	 .nav-content--sm {
+		position: absolute;
+		left: -285px;
+		width: 285px;
+		height: 100%;
+		border: 0;
+		background: #2b2d2d none;
+		-webkit-transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		-moz-transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		-o-transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+		transition: left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	 .nav-content--sm .nav-menu-wrapper {
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.va-container-h {
+		width: 100%;
+	}
+	.va-container-v {
+		height: 100%;
+	}
+	.va-container {
+		display: table;
+		position: relative;
+	}
+	.list-unstyled {
+		padding-left: 0;
+		list-style: none;
+	}
+
+	.nav-content--sm .nav-menu .menu-group {
+		margin-bottom: 34px;
+		line-height: 46px;
+	}
+
+	#sign_up_modal {
+		width: 100%;
+		height: 100%;
+		overflow-y: auto;
+	}
+
+	#sign_up_modal iframe {
+		margin:0;
+		border: none;
+		width: 100%;
+		height: auto;
+		min-height: 100%;
+		border-radius: 6px;
+	}
+		#sign_up_modal .modal-body, #sign_up_modal .modal-dialog, #sign_up_modal .modal-content {
+			height: 100%;
+		}
+	#sign_up_modal .modal-body {
+		margin-top:-59px;
+		background: transparent;
+		padding: 59px 0 0 !important;
+	}
+		#sign_up_modal button.close {
+			position: relative;
+			z-index: 1051; /* higher than modal box */
+		}
+</style>
+<script>
+	$('.register-modal').on('click', function(e){
+		e.preventDefault();
+		//console.log('Hello World');
+		//$('#sign_up_modal').modal('show').find('.modal-body').load($(this).attr('href'));
+		$('#sign_up_modal').modal('show').find('#login_iframe').attr("src", $(this).attr('href'));
+
+		$('#login_iframe').load( function() {
+			$('#login_iframe').contents().find("head")
+					.append($("<style type='text/css'>  .navbar-inverse{display:none;}  </style>"));
+		});
+
+	});
+</script>
