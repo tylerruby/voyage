@@ -210,6 +210,23 @@
 			position: relative;
 			z-index: 1051; /* higher than modal box */
 		}
+	@media only screen and (max-device-width: 480px) {
+		.modal-dialog {
+			margin: 0 !important;
+			padding: 0 !important;
+		}
+		.modal-dialog, .modal-content {
+			width: 100vw;
+			height: 100vh;
+		}
+		.modal-content {
+			border: none !important;
+			box-shadow: none !important;
+			border-radius: 0 !important;
+		}
+
+	}
+
 </style>
 <script>
 	$('.register-modal').on('click', function(e){
