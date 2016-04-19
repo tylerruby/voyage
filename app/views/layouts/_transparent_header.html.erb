@@ -210,7 +210,12 @@
 			position: relative;
 			z-index: 1051; /* higher than modal box */
 		}
-	@media only screen and (max-device-width: 480px) {
+		
+		/*
+		if you wanna modal fullscreen only on mobile, active the line bellow, and comment out the next line,
+		if not, modals will full screen for all device on small screen */
+	/*@media only screen and (max-device-width: 480px) {*/
+		@media (max-width: 480px) {
 		.modal-dialog {
 			margin: 0 !important;
 			padding: 0 !important;
